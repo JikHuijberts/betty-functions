@@ -1,0 +1,31 @@
+{
+  "description": "Description",
+  "label": "Insert Expression",
+  "category": "Misc",
+  "icon": {
+    "name": "ActionsIcon",
+    "color": "Orange"
+  },
+  "options": [
+    {
+      "meta": {
+        "type": "Model",
+        "validations": {
+          "required": true
+        }
+      },
+      "name": "model",
+      "label": "Import Model",
+      "info": "The model you want to import the data into."
+    },
+    {
+      "name": "defaultMappings",
+      "label": "Default mapping",
+      "info": "KEY = database name of the property or relation, VALUE = the property value or ID of the relational record.",
+      "meta": {
+        "type": "Map"
+      }
+    }
+  ],
+  "yields": "NONE"
+}
