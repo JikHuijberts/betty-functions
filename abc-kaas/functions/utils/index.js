@@ -1,0 +1,1 @@
+export {createMapping} from './mapper';

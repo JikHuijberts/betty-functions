@@ -1,0 +1,30 @@
+{
+  "description": "Description",
+  "label": "Update Expression",
+  "category": "Misc",
+  "icon": {
+    "name": "ActionsIcon",
+    "color": "Orange"
+  },
+  "options": [
+    {
+      "name": "selectedRecord",
+      "label": "Record",
+      "meta": {
+        "type": "Record",
+        "additional": {
+          "model": ["name"]
+        }
+      }
+    },
+    {
+      "name": "defaultMappings",
+      "label": "Default mapping",
+      "info": "KEY = database name of the property or relation, VALUE = the property value or ID of the relational record.",
+      "meta": {
+        "type": "Map"
+      }
+    }
+  ],
+  "yields": "NONE"
+}

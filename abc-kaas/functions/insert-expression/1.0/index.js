@@ -1,3 +1,5 @@
+import {createMapping } from "../../utils";
+
 const insertExpression = async ({model:{name}, defaultMappings}) => {
     let mutation = `
         mutation {
@@ -11,13 +13,7 @@ const insertExpression = async ({model:{name}, defaultMappings}) => {
     const {data, errors} = await gql(mutation, { 
         input:newMap
     });
+
 }
-function createMapping(map) {
-    var newMap= {};
-    map.forEach((kv) => {
-        newMap[kv["key"]] = kv["value"].toString()
-    });
-    console.log(newMap);
-    return newMap;
-}
+
 export default insertExpression;
