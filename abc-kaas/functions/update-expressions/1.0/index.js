@@ -17,8 +17,7 @@ const updateExpression = async ({
         }
     `;
     // Create mapping of the properties given.
-    var newMap = createMapping(defaultMappings);
-    
+    var newMap = createMapping("key","value",defaultMappings);
     // Start the mutation
     const {data, errors} = await gql(mutation, { 
         id: id,

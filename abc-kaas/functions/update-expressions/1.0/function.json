@@ -20,7 +20,7 @@
     {
       "name": "defaultMappings",
       "label": "Default mapping",
-      "info": "KEY = database name of the property or relation, VALUE = the property value or ID of the relational record.",
+      "info": "Here the expressions needs to be filled in.",
       "meta": {
         "type": "Map"
       }
