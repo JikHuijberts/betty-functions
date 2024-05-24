@@ -1,7 +1,22 @@
-const insertExpression = async ({model:{name}, defaultMapping, typeMapping}) => {
+import {
+    createCustomPropertyMapping,
+    createPropertySelectMapping
+} from "../../utils";
+
+const updateExpression = async ({
+        selectedRecord: {
+            data: {id},
+            model: {name},
+        },
+//      propertyMapping,
+        defaultMapping,
+        typeMapping,
+    }) => {
+
+    // Create mutation
     let mutation = `
-        mutation {
-            create${name}(input:$input){
+       mutation {
+            update${name}(id:$id, input:$input){
                 id
             }
         }
@@ -12,8 +27,10 @@ const insertExpression = async ({model:{name}, defaultMapping, typeMapping}) => 
  //       ...createPropertySelectMapping(propertyMapping),
         ...createCustomPropertyMapping(defaultMapping, typeMapping),
     }
+
     // Start the mutation
     const {data, errors} = await gql(mutation, { 
+        id: id,
         input:finalMap
     });
     if (errors) {
@@ -21,7 +38,7 @@ const insertExpression = async ({model:{name}, defaultMapping, typeMapping}) => 
         `Error code: ${errors}`);
         return;
     }
-    console.log(data);
     return
 }
-export default insertExpression;
+
+export default updateExpression;

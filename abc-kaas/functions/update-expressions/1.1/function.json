@@ -1,22 +1,24 @@
 {
-  "description": "Description",
-  "label": "Insert Expression",
-  "category": "Misc",
+  "description": "This funciton allows you to update expression values",
+  "label": "Update Expressions",
+  "category": "CRUD",
   "icon": {
-    "name": "ActionsIcon",
-    "color": "Orange"
+    "name": "replay",
+    "color": "Green"
   },
   "options": [
     {
+      "name": "selectedRecord",
+      "label": "Record",
       "meta": {
-        "type": "Model",
+        "type": "Record",
+        "additional": {
+          "model": ["name"]
+        },
         "validations": {
-          "required": true
+            "required":true
         }
-      },
-      "name": "model",
-      "label": "Import Model",
-      "info": "The model you want to import the data into."
+      }
     },
     {
       "name": "defaultMapping",

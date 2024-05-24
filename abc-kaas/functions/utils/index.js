@@ -1,1 +1,2 @@
-export {createMapping} from './mapper';
+export {createPropertySelectMapping, createCustomPropertyMapping} from './mapper';
+export {transformType} from './typeFormatting';

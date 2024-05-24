@@ -1,5 +1,3 @@
-import {createMapping } from "../../utils";
-
 const updateExpression = async ({
         selectedRecord: {
             data: {id},
@@ -19,10 +17,14 @@ const updateExpression = async ({
     // Create mapping of the properties given.
     var newMap = createMapping("key","value",defaultMappings);
     // Start the mutation
-    const {data, errors} = await gql(mutation, { 
-        id: id,
-        input:newMap
-    });
+    // const {data, errors} = await gql(mutation, { 
+    //     id: id,
+    //     input:newMap
+    // });
+    // if (errors) {
+    //     console.error(`Something went wrong. please try again. \n "+
+    //     "Error code: ${errors}`);
+    // }
 }
 
 export default updateExpression;
